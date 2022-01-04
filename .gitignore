@@ -9,6 +9,11 @@
 .history
 .svn/
 
+# Custom
+android/
+ios/
+
+
 # IntelliJ related
 *.iml
 *.ipr

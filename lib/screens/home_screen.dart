@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:liedgenerator/models/song.dart';
+import 'package:liedgenerator/screens/about.dart';
 import 'package:liedgenerator/util/sqflite_helper.dart';
 import 'package:liedgenerator/widgets/add_song.dart';
 import 'package:liedgenerator/widgets/song_grid.dart';
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Gemeinde Lieder Generator"),
+        title: const Text("Song Generator"),
         centerTitle: true,
         actions: [
           PopupMenuButton(
@@ -28,11 +29,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 value: 0,
                 child: Text("Reset Generated Songs"),
               ),
+              const PopupMenuItem(
+                value: 1,
+                child: Text("About"),
+              ),
             ],
             onSelected: (int item) {
               switch (item) {
                 case 0:
                   SqlHelper().resetGeneratedStatus();
+                  break;
+                case 1:
+                  Navigator.push(context, MaterialPageRoute(builder: (_) {
+                    return const AboutScreen();
+                  }));
                   break;
               }
               setState(() {});
