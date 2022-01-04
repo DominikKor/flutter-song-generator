@@ -54,7 +54,7 @@ class _SongGridState extends State<SongGrid> {
                             height: 20,
                             child: Card(
                               color:
-                                  generatedStatus ? Colors.grey[200] : Colors.white,
+                                  generatedStatus ? Colors.grey[300] : Colors.white,
                               elevation: 5,
                               child: Row(
                                 children: [
