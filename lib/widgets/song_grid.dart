@@ -131,9 +131,9 @@ class _SongGridState extends State<SongGrid> {
                       )
                     : Text(
                         randomSong!.number.toString(),
-                        style: TextStyle(
-                          fontSize: 22,
-                          color: Theme.of(context).primaryColor,
+                        style: const TextStyle(
+                          fontSize: 35,
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

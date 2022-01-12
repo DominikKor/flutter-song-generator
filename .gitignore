@@ -12,6 +12,7 @@
 # Custom
 android/
 ios/
+android/key.properties
 
 
 # IntelliJ related
